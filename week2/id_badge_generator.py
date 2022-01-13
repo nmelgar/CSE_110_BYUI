@@ -1,0 +1,22 @@
+print("Enter the following information about the student: ")
+
+first_name = input("First name: ")
+last_name = input("Last name: ")
+email_address = input("Email address: ")
+phone_number = input("Phone number: ")
+job_title = input("Job title: ")
+job_month_started = input("Student started its job (month): ")
+job_advanced_training = input("Received advanced training (yes/no): ")
+id_number = input("ID Number: ")
+hair_color = input("Hair color: ")
+eye_color = input("Eye color: ")
+
+print("The ID Card is:")
+print("----------------------------------------")
+# print(student_first_name.title() + ", " + student_last_name.title())
+print(f"{last_name.upper()}, {first_name.title()}\n{job_title.title()}\nID: {id_number}")
+print(f"\n{email_address.lower()}\n{phone_number}")
+print(f"\nHair: {hair_color.title()}\t\tEyes: {eye_color.title()}")
+print(f"Month: {job_month_started.title()}\t\tTraining: {job_advanced_training.title()}")
+
+print("----------------------------------------")
