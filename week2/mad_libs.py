@@ -1,7 +1,7 @@
 print("WELCOME TO MAD LIBS")
 print("-----------------------------------")
 print("Let's start!")
-user_number = input("Choose a number between 1 and 3: ")
+user_number = input("\nChoose a number between 1 and 3: ")
 
 if user_number == "1":
     print(f"You chose {user_number}")
@@ -9,7 +9,7 @@ if user_number == "1":
     plural_noun_1 = input("Enter another plural noun: ")
     verb = input("Enter a verb: ")
     story_1 = (f"\nWhen I go to the arcade with my {plural_noun}"
-               " there are lots of games to play. \nI spend"
+               " there are lots of games to play. \nI spend "
                "lots of time there with my friends. In the game X-Men "
                f"you can be different {plural_noun_1}. \nThe "
                f"point of the game is to {verb} every "
