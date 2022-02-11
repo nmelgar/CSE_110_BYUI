@@ -1,3 +1,11 @@
+place = ["hotel", "cinema"]
+way = ["stairs", "elevator"]
+action = ["fight", "stop fighting", "run", "hide"]
+state = ["win", "lose"]
+vehicle = ["green", "blue"]
+weapon = ["bat", "gun"]
+partner = ["martha", "ken"]
+
 print("*********************************")
 print("¡¡WORLD IS UNDER A NEW PANDEMIC!!")
 print("People are becoming zombies that eat brains!")
@@ -11,7 +19,7 @@ if hide_run.lower() == "run":
     print(f"you chose {hide_run.capitalize()}")
     print(f"You decided to {hide_run}, now you need to choose your weapon")
 
-if hide_run.lower() == "hide":
+elif hide_run.lower() == "hide":
     print(f"you chose {hide_run.capitalize()}")
     print(f"You decided to {hide_run}, now you need to choose your weapon")
 
