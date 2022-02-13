@@ -3,16 +3,16 @@ print("*********************************"
       "\nPeople are becoming zombies that eat brains!"
       "\nYou will have to do everything to survive")
 player_name = input("What's your name? ")
-print(f"Hello {player_name.capitalize()}! Try to survive")
+print(f"\nHello {player_name.capitalize()}! Try to survive")
 print("*********************************")
 
 
 def death_function():
-    print("You died :(")
+    print("\nYou died :(")
 
 
 def win_function():
-    print(f"CONGRATULATIONS {player_name.capitalize()}! you survived...")
+    print(f"\nCONGRATULATIONS {player_name.capitalize()}! you survived...")
     print("for now.....")
     print("The END????")
 
@@ -31,84 +31,81 @@ if hide_run.lower() == "hide":
     partner_decision = input("What partner will you choose? MARTHA or KEN?: ")
     # CHOOSE PARTNER 1
     if partner_decision.lower() == "martha":
-        print(f"You choose {partner_decision} as partner. While you speak about what "
-              "you will do. You listen a lot of weird noises, people begin to run "
+        print(f"\nYou choose {partner_decision} as partner. While you speak about what "
+              "\nyou will do. You listen a lot of weird noises, \npeople begin to run "
               "towards the exit.")
-        print(f"A zombie comes really fast and attacks {partner_decision}."
-              "\nShe begs for her life while forcing with the zombie to don't be bite.")
+        print(f"\nA zombie comes really fast and attacks {partner_decision}."
+              "\nShe begs for her life while forcing with the zombie to don't be bitten.")
         fight_or_leave = input(
             "Will you fight with the zombie or let her die? FIGHT or LEAVE?: ")
         if fight_or_leave.lower() == "fight":
             print("While you were distracted a zombie attacked and bit you.")
             death_function()
         elif fight_or_leave.lower() == "leave":
-            print(f"You decided to {fight_or_leave} and you kill the zombie."
-                  "\nAs you run you see all the people running toward the cinema and hotel,"
-                  "so you realize there aren't more option since all the ways are closed.")
+            print(f"\nYou decided to {fight_or_leave}. Poor of {partner_decision}."
+                  "\nAs you run you see all the people running towards the cinema and hotel,"
+                  "\nso you realize there aren't more option since all the ways are closed.")
             run_cinema_hotel_decision = input(
                 "Where will you go? CINEMA or HOTEL?: ")
             if run_cinema_hotel_decision.lower() == "cinema":
-                print(f"Many people are coming to the {run_cinema_hotel_decision} along with you."
-                      "You are in, but zombies are inside too, so you can't go back."
-                      "You can just go to the roof. You see the elevator is empty and not many people are using the stairs.")
+                print(f"\nMany people are coming to the {run_cinema_hotel_decision} along with you."
+                      "\nYou are in, but zombies are inside too, so you can't go back."
+                      "\nYou can just go to the roof. You see the elevator is empty and not many people are using the stairs.")
                 stairs_or_elevator = input(
                     "Which path will you take? ELEVATOR or STAIRS? ")
                 if stairs_or_elevator.lower() == "elevator":
-                    print(f"You took the {stairs_or_elevator} and it is moving fine."
-                          "You arrive to the roof. Less than 20 people are there."
-                          "2 helicopters arrive and you have to choose one as fast as you can"
-                          " since the roof is full of crazy zombies")
+                    print(f"\nYou took the {stairs_or_elevator} and it is moving fine."
+                          "\nYou arrive to the roof. Less than 20 people are there."
+                          "\n2 helicopters arrive and you have to choose one as fast as you can"
+                          "\nsince the roof is full of crazy zombies")
                     helicopter_color = input(
                         "Which helicopter will you choose? GREEN or BLUE? ")
                     if helicopter_color.lower() == "green":
-                        print(f"You took the {helicopter_color} helicopter."
+                        print(f"\nYou took the {helicopter_color} helicopter."
                               "You feel safe, but a crash sounded at the back of the helicopter"
-                              "Zombies are inside the helicopter! The pilot lost control and the helicopter crashes.")
+                              "\nZombies are inside the helicopter! \nThe pilot lost control and the helicopter crashes.")
                         death_function()
                     elif helicopter_color.lower() == "blue":
-                        print(f"You took the {helicopter_color} helicopter."
-                              f"You feel safe while along with {partner_decision} as the pilot drives to the mountains")
+                        print(f"\nYou took the {helicopter_color} helicopter."
+                              f"\nYou feel safe while along with {partner_decision} as the pilot drives to the mountains")
                         win_function()
                     else:
                         death_function()
                 elif stairs_or_elevator.lower() == "stairs":
-                    # print(f"You took the {stairs_or_elevator} and it is moving fine."
-                    #       "While you are going up, it begins to shake and a zombie enters the elevator"
-                    #       "from the top of it. You are so tired to fight")
-                    print(f"You took the {stairs_or_elevator} and you run so fast, since there are 3 floors."
-                          "While you are running so fast a zombie tackles you. You are so tired to fight")
+                    print(f"\nYou took the {stairs_or_elevator} and you run so fast, since there are 3 floors."
+                          "\nWhile you are running so fast a zombie tackles you. You are so tired to fight")
                     death_function()
                 else:
                     death_function()
 
             elif run_cinema_hotel_decision.lower() == "hotel":
-                print(f"Many people are coming to the {run_cinema_hotel_decision} along with you."
-                      "You are in, but zombies are inside too, so you can't go back."
-                      "You can just go to the roof. You see the elevator is empty and not many people are using the stairs.")
+                print(f"\nMany people are coming to the {run_cinema_hotel_decision} along with you."
+                      "\nYou are in, but zombies are inside too, so you can't go back."
+                      "\nYou can just go to the roof. You see the elevator is empty \nand not many people are using the stairs.")
                 stairs_or_elevator = input(
                     "Which path will you take? ELEVATOR or STAIRS? ")
                 if stairs_or_elevator.lower() == "stairs":
-                    print(f"You took the {stairs_or_elevator} and have to run since many zombies run behind you."
-                          "You arrive to the roof. Less than 20 people are there."
-                          "2 helicopters arrive and you have to choose one as fast as you can"
-                          " since the roof is full of crazy zombies")
+                    print(f"\nYou took the {stairs_or_elevator} and have to run since many zombies run behind you."
+                          "\nYou arrive to the roof. Less than 20 people are there."
+                          "\n2 helicopters arrive and you have to choose one as fast as you can"
+                          "\nsince the roof is full of crazy zombies")
                     helicopter_color = input(
                         "Which helicopter will you choose? GREEN or BLUE? ")
                     if helicopter_color.lower() == "blue":
-                        print(f"You took the {helicopter_color} helicopter."
-                              "You feel safe, but a crash sounded at the back of the helicopter"
-                              "Zombies are inside the helicopter! The pilot lost control and the helicopter crashes.")
+                        print(f"\nYou took the {helicopter_color} helicopter."
+                              "\nYou feel safe, but a crash sounded at the back of the helicopter"
+                              "\nZombies are inside the helicopter! The pilot lost control \nand the helicopter crashes.")
                         death_function()
                     elif helicopter_color.lower() == "green":
-                        print(f"You took the {helicopter_color} helicopter."
-                              "You feel safe while the pilot drives to the mountains")
+                        print(f"\nYou took the {helicopter_color} helicopter."
+                              "\nYou feel safe while the pilot drives to the mountains")
                         win_function()
                     else:
                         death_function()
                 elif stairs_or_elevator.lower() == "elevator":
                     print(f"You took the {stairs_or_elevator} and it is moving fine."
-                          "While you are going up, it begins to shake and a zombie enters the elevator"
-                          "from the top of it. You are so tired to fight")
+                          "\nWhile you are going up, it begins to shake and a zombie enters the elevator"
+                          "\nfrom the top of it. You are so tired to fight")
                     death_function()
                 else:
                     death_function()
@@ -116,70 +113,67 @@ if hide_run.lower() == "hide":
             death_function()
     # CHOOSE PARTNER 2
     elif partner_decision.lower() == "ken":
-        print(f"You choose {partner_decision} as partner. While you speak about what "
-              "you will do. You listen a lot of weird noises, people begin to run "
+        print(f"\nYou choose {partner_decision} as partner. While you speak about what "
+              "\nyou will do. You listen a lot of weird noises, people begin to run "
               "towards the exit")
-        print(f"A zombie comes really fast and attacks {partner_decision}."
+        print(f"\nA zombie comes really fast and attacks {partner_decision}."
               "\nShe begs for her life while forcing with the zombie to don't be bitten.")
         fight_or_leave = input(
             "Will you fight with the zombie or let him die? FIGHT or LEAVE?: ")
         if fight_or_leave.lower() == "fight":
-            print(f"You decided to {fight_or_leave} and you kill the zombie."
+            print(f"\nYou decided to {fight_or_leave} and you kill the zombie."
                   "\nAs you run you see all the people running toward the cinema and hotel,"
-                  "so you realize there aren't more option since all the ways are closed.")
+                  "\nso you realize there aren't more option since all the ways are closed.")
             run_cinema_hotel_decision = input(
                 "Where will you go? CINEMA or HOTEL?: ")
             if run_cinema_hotel_decision.lower() == "cinema":
-                print(f"Many people are coming to the {run_cinema_hotel_decision} along with you."
-                      "You are in, but zombies are inside too, so you can't go back."
-                      "You can just go to the roof. You see the elevator is empty and not many people are using the stairs.")
+                print(f"\nMany people are coming to the {run_cinema_hotel_decision} along with you."
+                      "\nYou are in, but zombies are inside too, so you can't go back."
+                      "\nYou can just go to the roof. You see the elevator is empty \nand not many people are using the stairs.")
                 stairs_or_elevator = input(
                     "Which path will you take? ELEVATOR or STAIRS? ")
                 if stairs_or_elevator.lower() == "elevator":
-                    print(f"You took the {stairs_or_elevator} and it is moving fine."
-                          "You arrive to the roof. Less than 20 people are there."
-                          "2 helicopters arrive and you have to choose one as fast as you can"
-                          " since the roof is full of crazy zombies")
+                    print(f"\nYou took the {stairs_or_elevator} and it is moving fine."
+                          "\nYou arrive to the roof. Less than 20 people are there."
+                          "\n2 helicopters arrive and you have to choose one as fast as you can"
+                          "\nsince the roof is full of crazy zombies")
                     helicopter_color = input(
                         "Which helicopter will you choose? GREEN or BLUE? ")
                     if helicopter_color.lower() == "green":
-                        print(f"You took the {helicopter_color} helicopter."
-                              "You feel safe, but a crash sounded at the back of the helicopter"
-                              "Zombies are inside the helicopter! The pilot lost control and the helicopter crashes.")
+                        print(f"\nYou took the {helicopter_color} helicopter."
+                              "\nYou feel safe, but a crash sounded at the back of the helicopter"
+                              "\nZombies are inside the helicopter! The pilot lost \ncontrol and the helicopter crashes.")
                         death_function()
                     elif helicopter_color.lower() == "blue":
                         print(f"You took the {helicopter_color} helicopter."
-                              f"You feel safe while along with {partner_decision} as the pilot drives to the mountains")
+                              f"\nYou feel safe while along with {partner_decision} as the pilot drives to the mountains")
                         win_function()
                     else:
                         death_function()
                 elif stairs_or_elevator.lower() == "stairs":
-                    # print(f"You took the {stairs_or_elevator} and it is moving fine."
-                    #       "While you are going up, it begins to shake and a zombie enters the elevator"
-                    #       "from the top of it. You are so tired to fight")
-                    print(f"You took the {stairs_or_elevator} and you run so fast, since there are 3 floors."
-                          "While you are running so fast a zombie tackles you. You are so tired to fight")
+                    print(f"\nYou took the {stairs_or_elevator} and you run so fast, since there are 3 floors."
+                          "\nWhile you are running so fast a zombie tackles you. You are so tired to fight")
                     death_function()
                 else:
                     death_function()
 
             elif run_cinema_hotel_decision.lower() == "hotel":
-                print(f"Many people are coming to the {run_cinema_hotel_decision} along with you."
-                      "You are in, but zombies are inside too, so you can't go back."
-                      "You can just go to the roof. You see the elevator is empty and not many people are using the stairs.")
+                print(f"\nMany people are coming to the {run_cinema_hotel_decision} along with you."
+                      "\nYou are in, but zombies are inside too, so you can't go back."
+                      "\nYou can just go to the roof. You see the elevator is empty \nand not many people are using the stairs.")
                 stairs_or_elevator = input(
                     "Which path will you take? ELEVATOR or STAIRS? ")
                 if stairs_or_elevator.lower() == "stairs":
-                    print(f"You took the {stairs_or_elevator} and have to run since many zombies run behind you."
-                          "You arrive to the roof. Less than 20 people are there."
-                          "2 helicopters arrive and you have to choose one as fast as you can"
-                          " since the roof is full of crazy zombies")
+                    print(f"\nYou took the {stairs_or_elevator} and have to run since many zombies run behind you."
+                          "\nYou arrive to the roof. Less than 20 people are there."
+                          "\n2 helicopters arrive and you have to choose one as fast as you can"
+                          "\nsince the roof is full of crazy zombies")
                     helicopter_color = input(
                         "Which helicopter will you choose? GREEN or BLUE? ")
                     if helicopter_color.lower() == "blue":
-                        print(f"You took the {helicopter_color} helicopter."
-                              "You feel safe, but a crash sounded at the back of the helicopter"
-                              "Zombies are inside the helicopter! The pilot lost control and the helicopter crashes.")
+                        print(f"\nYou took the {helicopter_color} helicopter."
+                              "\nYou feel safe, but a crash sounded at the back of the helicopter"
+                              "\nZombies are inside the helicopter! The pilot lost control \nand the helicopter crashes.")
                         death_function()
                     elif helicopter_color.lower() == "green":
                         print(f"You took the {helicopter_color} helicopter."
@@ -188,9 +182,9 @@ if hide_run.lower() == "hide":
                     else:
                         death_function()
                 elif stairs_or_elevator.lower() == "elevator":
-                    print(f"You took the {stairs_or_elevator} and it is moving fine."
-                          "While you are going up, it begins to shake and a zombie enters the elevator"
-                          "from the top of it. You are so tired to fight")
+                    print(f"\nYou took the {stairs_or_elevator} and it is moving fine."
+                          "\nWhile you are going up, it begins to shake and a zombie enters the elevator"
+                          "\nfrom the top of it. You are so tired to fight")
                     death_function()
                 else:
                     death_function()
@@ -203,7 +197,6 @@ if hide_run.lower() == "hide":
         death_function()
 ####THE OTHER SCENARIO OF THE GAME, USER DECIDES TO RUN#######################################
 elif hide_run.lower() == "run":
-    print(f"you chose {hide_run.capitalize()}")
     print(f"\nYou decided to {hide_run}. As you left the hospital, "
           "you find out \nthere are many people outthere, they are as confused as you."
           "\nYou realize this is a big problem, so you think "
@@ -214,79 +207,76 @@ elif hide_run.lower() == "run":
         "What will you do? RUN, CINEMA or HOTEL?: ")
     ####FIRST DECISION###################
     if run_cinema_hotel_decision.lower() == "run":
-        print(f"As you {run_cinema_hotel_decision} a zombie comes really fast and attacks an old woman."
+        print(f"\nAs you {run_cinema_hotel_decision} a zombie comes really fast and attacks an old woman."
               "\nShe begs for her life while forcing with the zombie to don't be bitten.")
         fight_or_leave = input(
             "Will you fight with the zombie or let her die? FIGHT or LEAVE?: ")
         if fight_or_leave.lower() == "fight":
-            print(f"You decided to {fight_or_leave} and you kill the zombie."
-                  "The old woman is really greatful with you. But now you are tired."
-                  "\nAs you run you see all the people running toward the cinema and hotel,"
-                  "so you realize there aren't more option since all the ways are closed.")
+            print(f"\nYou decided to {fight_or_leave} and you kill the zombie."
+                  "\nThe old woman is really greatful with you. But now you are tired."
+                  "\nAs you run you see all the people running towards the cinema and hotel,"
+                  "\nso you realize there aren't more option since all the ways are closed.")
             run_cinema_hotel_decision = input(
                 "Where will you go? CINEMA or HOTEL?: ")
             if run_cinema_hotel_decision.lower() == "cinema":
-                print(f"Many people are coming to the {run_cinema_hotel_decision} along with you."
-                      "You are in, but zombies are inside too, so you can't go back."
-                      "You can just go to the roof. You see the elevator is empty and not many people are using the stairs.")
+                print(f"\nMany people are coming to the {run_cinema_hotel_decision} along with you."
+                      "\nYou are in, but zombies are inside too, so you can't go back."
+                      "\nYou can just go to the roof. You see the elevator is empty \nand not many people are using the stairs.")
                 stairs_or_elevator = input(
                     "Which path will you take? ELEVATOR or STAIRS? ")
                 if stairs_or_elevator.lower() == "elevator":
-                    print(f"You took the {stairs_or_elevator} and it is moving fine."
-                          "You arrive to the roof. Less than 20 people are there."
-                          "2 helicopters arrive and you have to choose one as fast as you can"
-                          " since the roof is full of crazy zombies")
+                    print(f"\nYou took the {stairs_or_elevator} and it is moving fine."
+                          "\nYou arrive to the roof. Less than 20 people are there."
+                          "\n2 helicopters arrive and you have to choose one as fast as you can"
+                          "\nsince the roof is full of crazy zombies")
                     helicopter_color = input(
                         "Which helicopter will you choose? GREEN or BLUE? ")
                     if helicopter_color.lower() == "green":
-                        print(f"You took the {helicopter_color} helicopter."
-                              "You feel safe, but a crash sounded at the back of the helicopter"
-                              "Zombies are inside the helicopter! The pilot lost control and the helicopter crashes.")
+                        print(f"\nYou took the {helicopter_color} helicopter."
+                              "\nYou feel safe, but a crash sounded at the back of the helicopter"
+                              "\nZombies are inside the helicopter! The pilot lost control \nand the helicopter crashes.")
                         death_function()
                     elif helicopter_color.lower() == "blue":
-                        print(f"You took the {helicopter_color} helicopter."
+                        print(f"\nYou took the {helicopter_color} helicopter."
                               "You feel safe while the pilot drives to the mountains")
                         win_function()
                     else:
                         death_function()
                 elif stairs_or_elevator.lower() == "stairs":
-                    # print(f"You took the {stairs_or_elevator} and it is moving fine."
-                    #       "While you are going up, it begins to shake and a zombie enters the elevator"
-                    #       "from the top of it. You are so tired to fight")
-                    print(f"You took the {stairs_or_elevator} and you run so fast, since there are 3 floors."
-                          "While you are running so fast a zombie tackles you. You are so tired to fight")
+                    print(f"\nYou took the {stairs_or_elevator} and you run so fast, since there are 3 floors."
+                          "\nWhile you are running so fast a zombie tackles you. You are so tired to fight")
                     death_function()
                 else:
                     death_function()
 
             elif run_cinema_hotel_decision.lower() == "hotel":
-                print(f"Many people are coming to the {run_cinema_hotel_decision} along with you."
-                      "You are in, but zombies are inside too, so you can't go back."
-                      "You can just go to the roof. You see the elevator is empty and not many people are using the stairs.")
+                print(f"\nMany people are coming to the {run_cinema_hotel_decision} along with you."
+                      "\nYou are in, but zombies are inside too, so you can't go back."
+                      "\nYou can just go to the roof. You see the elevator is empty \nand not many people are using the stairs.")
                 stairs_or_elevator = input(
                     "Which path will you take? ELEVATOR or STAIRS? ")
                 if stairs_or_elevator.lower() == "stairs":
-                    print(f"You took the {stairs_or_elevator} and have to run since many zombies run behind you."
-                          "You arrive to the roof. Less than 20 people are there."
-                          "2 helicopters arrive and you have to choose one as fast as you can"
-                          " since the roof is full of crazy zombies")
+                    print(f"\nYou took the {stairs_or_elevator} and have to run since many zombies run behind you."
+                          "\nYou arrive to the roof. Less than 20 people are there."
+                          "\n2 helicopters arrive and you have to choose one as fast as you can"
+                          "\nsince the roof is full of crazy zombies")
                     helicopter_color = input(
                         "Which helicopter will you choose? GREEN or BLUE? ")
                     if helicopter_color.lower() == "blue":
-                        print(f"You took the {helicopter_color} helicopter."
-                              "You feel safe, but a crash sounded at the back of the helicopter"
-                              "Zombies are inside the helicopter! The pilot lost control and the helicopter crashes.")
+                        print(f"\nYou took the {helicopter_color} helicopter."
+                              "\nYou feel safe, but a crash sounded at the back of the helicopter"
+                              "\nZombies are inside the helicopter! The pilot lost control \nand the helicopter crashes.")
                         death_function()
                     elif helicopter_color.lower() == "green":
-                        print(f"You took the {helicopter_color} helicopter."
+                        print(f"\nYou took the {helicopter_color} helicopter."
                               "You feel safe while the pilot drives to the mountains")
                         win_function()
                     else:
                         death_function()
                 elif stairs_or_elevator.lower() == "elevator":
-                    print(f"You took the {stairs_or_elevator} and it is moving fine."
-                          "While you are going up, it begins to shake and a zombie enters the elevator"
-                          "from the top of it. You are so tired to fight")
+                    print(f"\nYou took the {stairs_or_elevator} and it is moving fine."
+                          "\nWhile you are going up, it begins to shake and a zombie enters the elevator"
+                          "\nfrom the top of it. You are so tired to fight")
                     death_function()
                 else:
                     death_function()
@@ -298,22 +288,22 @@ elif hide_run.lower() == "run":
             death_function()
         ####SECOND DECISION###################
     elif run_cinema_hotel_decision.lower() == "cinema":
-        print(f"Many people are coming to the {run_cinema_hotel_decision} along with you."
-              "You are in, but zombies are inside too, so you can't go back."
-              "You can just go to the roof. You see the elevator is empty and not many people are using the stairs.")
+        print(f"\nMany people are coming to the {run_cinema_hotel_decision} along with you."
+              "\nYou are in, but zombies are inside too, so you can't go back."
+              "\nYou can just go to the roof. You see the elevator is empty \nand not many people are using the stairs.")
         stairs_or_elevator = input(
             "Which path will you take? ELEVATOR or STAIRS? ")
         if stairs_or_elevator.lower() == "elevator":
-            print(f"You took the {stairs_or_elevator} and it is moving fine."
-                  "You arrive to the roof. Less than 20 people are there."
-                  "2 helicopters arrive and you have to choose one as fast as you can"
-                  " since the roof is full of crazy zombies")
+            print(f"\nYou took the {stairs_or_elevator} and it is moving fine."
+                  "\nYou arrive to the roof. Less than 20 people are there."
+                  "\n2 helicopters arrive and you have to choose one as fast as you can"
+                  "\nsince the roof is full of crazy zombies")
             helicopter_color = input(
                 "Which helicopter will you choose? GREEN or BLUE? ")
             if helicopter_color.lower() == "green":
-                print(f"You took the {helicopter_color} helicopter."
-                      "You feel safe, but a crash sounded at the back of the helicopter"
-                      "Zombies are inside the helicopter! The pilot lost control and the helicopter crashes.")
+                print(f"\nYou took the {helicopter_color} helicopter."
+                      "\nYou feel safe, but a crash sounded at the back of the helicopter"
+                      "\nZombies are inside the helicopter! The pilot lost control \nand the helicopter crashes.")
                 death_function()
             elif helicopter_color.lower() == "blue":
                 print(f"You took the {helicopter_color} helicopter."
@@ -322,43 +312,40 @@ elif hide_run.lower() == "run":
             else:
                 death_function()
         elif stairs_or_elevator.lower() == "stairs":
-            # print(f"You took the {stairs_or_elevator} and it is moving fine."
-            #       "While you are going up, it begins to shake and a zombie enters the elevator"
-            #       "from the top of it. You are so tired to fight")
-            print(f"You took the {stairs_or_elevator} and you run so fast, since there are 3 floors."
-                  "While you are running so fast a zombie tackles you. You are so tired to fight")
+            print(f"\nYou took the {stairs_or_elevator} and you run so fast, since there are 3 floors."
+                  "\nWhile you are running so fast a zombie tackles you. You are so tired to fight")
             death_function()
         else:
             death_function()
         ####THIRD DECISION###################
     elif run_cinema_hotel_decision.lower() == "hotel":
-        print(f"Many people are coming to the {run_cinema_hotel_decision} along with you."
-              "You are in, but zombies are inside too, so you can't go back."
-              "You can just go to the roof. You see the elevator is empty and not many people are using the stairs.")
+        print(f"\nMany people are coming to the {run_cinema_hotel_decision} along with you."
+              "\nYou are in, but zombies are inside too, so you can't go back."
+              "\nYou can just go to the roof. You see the elevator is empty \nand not many people are using the stairs.")
         stairs_or_elevator = input(
             "Which path will you take? ELEVATOR or STAIRS? ")
         if stairs_or_elevator.lower() == "stairs":
-            print(f"You took the {stairs_or_elevator} and have to run since many zombies run behind you."
-                  "You arrive to the roof. Less than 20 people are there."
-                  "2 helicopters arrive and you have to choose one as fast as you can"
-                  " since the roof is full of crazy zombies")
+            print(f"\nYou took the {stairs_or_elevator} and have to run since many zombies run behind you."
+                  "\nYou arrive to the roof. Less than 20 people are there."
+                  "\n2 helicopters arrive and you have to choose one as fast as you can"
+                  "\nsince the roof is full of crazy zombies")
             helicopter_color = input(
                 "Which helicopter will you choose? GREEN or BLUE? ")
             if helicopter_color.lower() == "blue":
-                print(f"You took the {helicopter_color} helicopter."
-                      "You feel safe, but a crash sounded at the back of the helicopter"
-                      "Zombies are inside the helicopter! The pilot lost control and the helicopter crashes.")
+                print(f"\nYou took the {helicopter_color} helicopter."
+                      "\nYou feel safe, but a crash sounded at the back of the helicopter"
+                      "\nZombies are inside the helicopter! The pilot lost control \nand the helicopter crashes.")
                 death_function()
             elif helicopter_color.lower() == "green":
-                print(f"You took the {helicopter_color} helicopter."
+                print(f"\nYou took the {helicopter_color} helicopter."
                       "You feel safe while the pilot drives to the mountains")
                 win_function()
             else:
                 death_function()
         elif stairs_or_elevator.lower() == "elevator":
-            print(f"You took the {stairs_or_elevator} and it is moving fine."
-                  "While you are going up, it begins to shake and a zombie enters the elevator"
-                  "from the top of it. You are so tired to fight")
+            print(f"\nYou took the {stairs_or_elevator} and it is moving fine."
+                  "\nWhile you are going up, it begins to shake \nand a zombie enters the elevator"
+                  "\nfrom the top of it. You are so tired to fight")
             death_function()
         else:
             death_function()
