@@ -1,7 +1,8 @@
 action = ""
 run = True
 items = []
-print("\nWelcome to the Shopping Cart program")
+print("******************************************")
+print("Welcome to the Shopping Cart program")
 
 while run:
     print("")
