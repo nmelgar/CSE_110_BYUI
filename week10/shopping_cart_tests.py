@@ -1,10 +1,12 @@
+from os import remove
+
+
 action = ""
-items = []
-prices = []
+items = ["ITEM1", "ITEM2", "ITEM3"]
+prices = [25.2, 45.3, 67.2]
 run = True
 
-print("******************************************")
-print("Welcome to the Shopping Cart program")
+
 
 while run:
     print("")
@@ -22,13 +24,7 @@ while run:
 
     add_item = ""
     add_price = ""
-    # 1. ADD ITEM
-    if action == 1:
-        add_item = str(input("\nWhat item would you like to add? "))
-        items.append(add_item)
-        add_price = (float(input(f"What is the price of {add_item}? ")))
-        prices.append(add_price)
-        print(f"'{add_item}' has been added to the cart")
+ 
 
     # 2 VIEW CART
     if action == 2:
@@ -51,13 +47,13 @@ while run:
             items.pop(remove_item)
             prices.pop(remove_item)
             print(f"Item has been deleted")
-
+    
     #COMPUTE TOTAL
     total = 0
     if action == 4:
         for price in prices:
             total += price
-        print(f"The total price of the items in the shopping cart is {total}")
+        print(f"The total price of the items in the shopping cart is ${total: .2f}")
 
     # 5. QUIT
     if action == 5:
