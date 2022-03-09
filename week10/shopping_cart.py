@@ -1,6 +1,8 @@
 action = ""
-run = True
 items = []
+prices = []
+run = True
+
 print("******************************************")
 print("Welcome to the Shopping Cart program")
 
@@ -18,18 +20,25 @@ while run:
 
     action = int(input("\nPlease enter an action: "))
 
-    new_item = ""
+    add_item = ""
+    add_price = ""
     # 1. ADD ITEM
     if action == 1:
-        new_item = str(input("\nWhat item would like to add? "))
-        items.append(new_item)
-        print(f"'{new_item}' has been added to the cart")
+        add_item = str(input("\nWhat item would like to add? "))
+        items.append(add_item)
+        add_price = (float(input(f"What is the price of {add_item}? ")))
+        prices.append(add_price)
+        print(f"'{add_item}' has been added to the cart")
 
     # 2 VIEW CART
     if action == 2:
         print("The contents of the shopping cart are:")
-        for item in items:
-            print(item.capitalize())
+        for index in range(len(items)):
+            add_item = items[index]
+            add_price = prices[index]
+            print(f"{index +1}. {add_item.capitalize()} - ${add_price: .2f}")
+        # for item in items:
+        #     print(item.capitalize())
 
     # 5. QUIT
     if action == 5:
