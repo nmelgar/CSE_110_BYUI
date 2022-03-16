@@ -1,6 +1,6 @@
 # use the open function
 # check the folder where it is
-with open("week11/courses.txt") as courses_file:
+with open("courses.txt") as courses_file:
     for line in courses_file:
         #to clean the white spaces
         line = line.strip()
