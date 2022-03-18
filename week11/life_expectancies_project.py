@@ -1,6 +1,8 @@
 column_count = 0
-min_age = 1
-max_age = 150
+min_age = 25
+max_age = 50
+selected_country = ""
+selected_year = ""
 
 with open("life-expectancy.csv") as data_source:
     for line in data_source:
@@ -17,11 +19,14 @@ with open("life-expectancy.csv") as data_source:
 
         if column_count != 1:
             life_expectancy = float(life_expectancy)
-            print(f"{country}, {code}, {year}, {life_expectancy}, {column_count}")
 
-            if life_expectancy >= min_age:
+            if life_expectancy <= min_age:
                 min_age = life_expectancy
-            if life_expectancy <= max_age:
+                selected_country = country
+                
+            elif life_expectancy >= max_age:
                 max_age = life_expectancy
-    print(f"Max life expectancty is {max_age}")
-    print(f"Max life expectancty is {min_age}")
+                selected_country = country
+                
+    print(f"The overall max life expectancty is: {max_age} from {selected_country} in {selected_year}")
+    print(f"The overall min life expectancty is: {min_age} from {selected_country} in {selected_year}")
