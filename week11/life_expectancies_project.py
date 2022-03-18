@@ -1,8 +1,11 @@
 column_count = 0
 min_age = 25
 max_age = 50
-selected_country = ""
-selected_year = ""
+min_selected_country = ""
+max_selected_country = ""
+min_selected_year = ""
+max_selected_year = ""
+year_input = int(input("Enter the year o interest: "))
 
 with open("life-expectancy.csv") as data_source:
     for line in data_source:
@@ -18,15 +21,20 @@ with open("life-expectancy.csv") as data_source:
         column_count += 1
 
         if column_count != 1:
+            # GET GENERAL MAX and MIN LIFE EXPECTANCY
             life_expectancy = float(life_expectancy)
 
             if life_expectancy <= min_age:
                 min_age = life_expectancy
-                selected_country = country
-                
+                min_selected_country = country
+                min_selected_year = year
+
             elif life_expectancy >= max_age:
                 max_age = life_expectancy
-                selected_country = country
-                
-    print(f"The overall max life expectancty is: {max_age} from {selected_country} in {selected_year}")
-    print(f"The overall min life expectancty is: {min_age} from {selected_country} in {selected_year}")
+                max_selected_country = country
+                max_selected_year = year
+
+    print(
+        f"\nThe overall max life expectancty is: {max_age} from {max_selected_country} in {max_selected_year}")
+    print(
+        f"The overall min life expectancty is: {min_age} from {min_selected_country} in {min_selected_year}")
