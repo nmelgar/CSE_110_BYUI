@@ -33,6 +33,11 @@ with open("life-expectancy.csv") as data_source:
                 max_age = life_expectancy
                 max_selected_country = country
                 max_selected_year = year
+        
+        #will get the average, max, min of specific year
+        if column_count != 1:
+            if year_input == year:
+                print(f"The year is {year_input}")
 
     print(
         f"\nThe overall max life expectancty is: {max_age} from {max_selected_country} in {max_selected_year}")
