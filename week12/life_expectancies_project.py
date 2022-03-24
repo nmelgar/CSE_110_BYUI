@@ -5,9 +5,10 @@ min_selected_country = ""
 max_selected_country = ""
 min_selected_year = ""
 max_selected_year = ""
-year_input = int(input("Enter the year o interest: "))
+year_input = 0
 
 with open("life-expectancy.csv") as data_source:
+    year_input = int(input("Enter the year o interest: "))
     for line in data_source:
         # clean line
         line = line.strip()
@@ -29,16 +30,15 @@ with open("life-expectancy.csv") as data_source:
                 min_selected_country = country
                 min_selected_year = year
 
-            elif life_expectancy >= max_age:
+            if life_expectancy >= max_age:
                 max_age = life_expectancy
                 max_selected_country = country
                 max_selected_year = year
-        
-        #will get the average, max, min of specific year
-        #if line instead of column_count TRY
-        if column_count != 1:
-            if year_input == year:
-                print(f"The year is {year_input}")
+
+            if year_input == int(year):
+                year_input = year
+                print(f"the year is {year}")
+                
 
     print(
         f"\nThe overall max life expectancty is: {max_age} from {max_selected_country} in {max_selected_year}")
