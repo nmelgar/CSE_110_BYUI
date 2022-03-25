@@ -8,6 +8,9 @@ year_min_selected_country = ""
 year_max_selected_country = ""
 year_min_selected_year = ""
 year_max_selected_year = ""
+year_sum_counter = 0
+year_sum_total = 0
+average = 0
 
 with open("life-expectancy.csv") as data_source:
     year_input = int(input("Enter the year o interest: "))
@@ -28,12 +31,9 @@ with open("life-expectancy.csv") as data_source:
             life_expectancy = float(life_expectancy)
             if year_input == int(year):
                 # print(str(year_input) + " " +  str(column_count) +  " " + str(life_expectancy))
-                if life_expectancy <= year_min_age:
-                    year_min_age = life_expectancy
-                    year_max_selected_country = country
-                if life_expectancy >= year_max_age:
-                    year_max_age = life_expectancy
-                    year_min_selected_country = country
-    print(f"Min age expectancy was in {year_min_selected_country} with {year_min_age}")
-    print(f"Min age expectancy was in {year_max_selected_country} with {year_max_age}")
-                
+                year_sum_counter += 1
+                year_sum_total += life_expectancy
+                average = year_sum_total / year_sum_counter
+                print(f"{life_expectancy} + {year_sum_counter}")
+    print(f"Total is = {year_sum_total}")
+    print(f"The average is = {average: .2f}")

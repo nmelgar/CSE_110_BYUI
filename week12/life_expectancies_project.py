@@ -15,6 +15,9 @@ year_min_selected_country = ""
 year_max_selected_country = ""
 year_min_selected_year = ""
 year_max_selected_year = ""
+year_sum_counter = 0
+year_sum_total = 0
+average = 0
 
 with open("life-expectancy.csv") as data_source:
     year_input = int(input("Enter the year o interest: "))
@@ -47,13 +50,17 @@ with open("life-expectancy.csv") as data_source:
             # FOR A SPECIFIC YEAR
             if year_input == int(year):
                 # print(str(year_input) + " " +  str(column_count) +  " " + str(life_expectancy))
+                year_sum_counter += 1
+                year_sum_total += life_expectancy
+                average = year_sum_total / year_sum_counter
+
                 if life_expectancy <= year_min_age:
                     year_min_age = life_expectancy
-                    year_max_selected_country = country
+                    year_min_selected_country = country
 
                 if life_expectancy >= year_max_age:
                     year_max_age = life_expectancy
-                    year_min_selected_country = country
+                    year_max_selected_country = country
 
     print(
         f"\nThe overall max life expectancty is: {max_age} from {max_selected_country} in {max_selected_year}")
@@ -61,8 +68,10 @@ with open("life-expectancy.csv") as data_source:
         f"The overall min life expectancty is: {min_age} from {min_selected_country} in {min_selected_year}")
 
     # FOR A SPECIFIC YEAR
-    print(f"\nFor the year {year_input}")
+    print(f"\nFor the year {year_input}:")
     print(
-        f"Min age expectancy was in {year_max_selected_country} with {year_max_age}")
+        f"The average life expectancy across al countries was {average: .2f}")
     print(
-        f"Min age expectancy was in {year_min_selected_country} with {year_min_age}")
+        f"The max age expectancy was in {year_max_selected_country} with {year_max_age}")
+    print(
+        f"The min age expectancy was in {year_min_selected_country} with {year_min_age}")
